@@ -39,6 +39,9 @@ header {
     transition: background-color 0.2;
     border:none;
 }
+.Log_SignButton button:hover {
+    cursor:pointer;
+}
 
 
 .Log_SignButton button:hover{
