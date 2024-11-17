@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Shop Watches</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet"  href="main.css">
+        <br><br>
+    </head>
+    <body>
+        <header>
+            <div class="logo" style="margin-top: 0px;">
+                <img src="IWC.jpg" alt="IWC">
+            </div>
+        <center><h1>IWC Radnja Satova</h1></center>      
+
+        </nav>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Main</a></li>
+                    <li><a href="watches.html">Watches</a></li>
+                    <li><a href="location.html">Location</a></li>
+                    <li><a href="orders.html">Orders</a></li>
+                </ul>
+            </nav>
+        </header><br><br><br><br><br>
+
+        <h2 style="font-family: Arial, Helvetica, sans-serif; color:rgb(214, 220, 190); margin-left: 9%; ">Orders and shipping:</h2>
+<br>
+
+<table class="table table-bordered table-striped table-hover table-responsive-sm mx-auto" style="width: 80%;">
+    <thead>
+        <tr>
+            <th>REGION</th>
+            <th>Estimated Delivery Time</th>
+            <th>Shipping Methods</th>
+            <th>Available Shipping Methods</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>APAC</td>
+            <td>7-14 business days</td>
+            <td>$20 - $50</td>
+            <td>Standard, Express</td>
+        </tr>
+        <tr>
+            <td>CIS</td>
+            <td>7-14 business days</td>
+            <td>$25 - $60</td>
+            <td>Overnight shipping</td>
+        </tr>
+        <tr>
+            <td>NA</td>
+            <td>7-14 business days</td>
+            <td>$30 - $70</td>
+            <td>Standard, Express</td>
+        </tr>
+        <tr>
+            <td>LATAM</td>
+            <td>10-20 business days</td>
+            <td>$35 - $80</td>
+            <td>Standard, Express</td>
+        </tr>
+        <tr>
+            <td>MEA</td>
+            <td>7-15 business days</td>
+            <td>$40 - $75</td>
+            <td>Standard, Express</td>
+        </tr>
+    </tbody>
+</table>
+
+  <p style="color: rgb(214, 220, 190); font-family: Arial, Helvetica, sans-serif; margin-left: 9%;">NOTE: Shipping is free for all orders above 400$</p>
+        <br><br><br>
+
+
+        <div id="target-section"></div>
+        <br><br><br><br>
+        <div class="terms">
+            <br><br>
+            <h2>Terms and Conditions:</h2>
+            <ol>
+                <li>Acceptance of Terms</li>
+                <p>By using this website, you agree to these Terms and Conditions in full. If you do not agree, please do not use our site.</p>
+                <li>Changes to Terms</li>
+                <p>We reserve the right to modify these terms at any time. Changes will be effective immediately upon posting on this page. It is your responsibility to review these terms periodically.</p>
+                <li>Products and Availability</li>
+                <p>We strive to provide accurate product descriptions and availability information. However, we do not guarantee that all products will be in stock or accurately represented.</p>
+                <li>Pricing</li>
+                <p>All prices are listed in [currency] and are subject to change without notice. We reserve the right to correct any pricing errors.</p>
+                <li>Payment</li>
+                <p>We accept various payment methods. You agree to provide accurate and complete payment information when making a purchase.</p>
+                <li>Shipping and Delivery</li>
+                <p>We offer shipping options as described on our website. Delivery times may vary based on location and chosen shipping method.</p>
+                <li>Returns and Refunds</li>
+                <p>We have a 30-day return policy for unused products. Please refer to our Returns Policy for more details.</p>
+                <li>Intellectual Property</li>
+                <p>All content on this website, including text, images, and logos, is the property of Gaming Shop and is protected by copyright and other intellectual property laws.</p>
+                <li>User Conduct</li>
+                <p>You agree to use this site only for lawful purposes. You must not misuse our site or attempt to gain unauthorized access to it.</p>
+                <li>Limitation of Liability</li>
+                <p>Gaming Shop shall not be liable for any indirect, incidental, or consequential damages arising from your use of this website or the products purchased.</p>
+                <li>Governing Law</li>
+                <p>These terms are governed by the laws of Bosnia and Herzegovina. Any disputes will be resolved in accordance with these laws.</p>
+            </ol>
+        </div><br><br>
+        <br><br><br>
+
+
+        <center>
+            <div class="container mt-4">
+            <div class="col-md-4">
+            <div class="card p-3">
+            <div id="watch-container">
+            <center>
+                    <span class="watch" draggable="true" data-value="1">⌚</span>
+                    <span class="watch" draggable="true" data-value="2">⌚</span>
+                    <span class="watch" draggable="true" data-value="3">⌚</span>
+                    <span class="watch" draggable="true" data-value="4">⌚</span>
+                    <span class="watch" draggable="true" data-value="5">⌚</span>
+            </center>
+            </div>
+            </div>
+            </div>
+            <br>
+            <div class="col-md-8">
+            <div class="col-md-6 mb-4">
+            <div class="card">
+            <div class="card-body">
+                    <h4 class="card-title" style="text-align: center;">RATE US</h4>
+            <div class="card-rating" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </center>
+
+            <script>
+                const watches = document.querySelectorAll('.watch');
+            
+                watches.forEach(watch => {
+                    watch.addEventListener('dragstart', event => {
+                        event.dataTransfer.setData('text', watch.dataset.value);
+                        event.target.classList.add('dragging');
+                    });
+            
+                    watch.addEventListener('dragend', event => {
+                        event.target.classList.remove('dragging');
+                    });
+                });
+            
+                function allowDrop(event) {
+                    event.preventDefault();
+                }
+            
+                function drop(event) {
+                    event.preventDefault();
+                    const value = event.dataTransfer.getData('text');
+                    const ratingContainer = event.target;
+            
+                    ratingContainer.innerHTML = '';
+            
+                    for (let i = 0; i < value; i++) {
+                        const newWatch = document.createElement('span');
+                        newWatch.textContent = '⌚';
+                        newWatch.classList.add('watch');
+                        ratingContainer.appendChild(newWatch);
+                    }
+                }
+            </script>
+
+
+
+        <footer>
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p style="padding: 5px;">If you need help, please contact us <a href="mailto:amela.vatres@stu.ibu.edu.ba" style="color: inherit;" target="_blank"><u>here</u></a></p> 
+                    <p style="padding: 5px;">Fundations of Web Development - Tarik Kurtovic</p>
+                </div>
+                
+                <div class="contact-info">
+                    <p style="padding: 5px;">Kontakt telefon: 062-397-981</p>
+                    <p style="padding: 5px;">Radno vrijeme: Pon-Pet 8:00-21:00</p>
+                </div>
+                
+                <div class="social-media">
+                    <a href="https://www.facebook.com/IWCWatches/?locale=hr_HR"><img src="fb.png" alt="Facebook"></a>
+                    <a href="https://twitter.com/IWC"><img src="twt.png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/iwcwatches/"><img src="ig.jpg" alt="Instagram"></a>
+                </div>
+            </div>
+        </footer>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9k/ScQsAP7hUibX38jENuPSgGP0KPj7lj4WfP" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        </body>
+        </html>
