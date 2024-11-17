@@ -142,7 +142,10 @@ html:hover footer {
     display:flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: center;
+    margin-left: 0% !important;
 }
+
 
 .watch_market{
     display:flex;
