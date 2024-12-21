@@ -101,7 +101,40 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
+<br><br><br><br><br>
+<h2 style="color: azure; margin-left: 20px;">FAQs - Watches</h2>
+<div class="accordition">
+    <div class="contentBx">
+        <div class="label">What makes IWC Watches unique?</div>
+        <div class="content">
+            <p>IWC Watches are renowned for their precision craftsmanship, innovative engineering, and timeless designs. 
+                Each timepiece combines Swiss tradition with modern technology, making it a masterpiece of luxury.</p>
+        </div>
+    </div>
+    <div class="contentBx">
+        <div class="label">Are IWC Watches water-resistant?</div>
+        <div class="content">
+            <p>Most IWC watches are water-resistant to varying degrees, depending on the model.
+               Always check the specifications of your timepiece and avoid exposing it to extreme conditions unless designed for such use.</p>
+        </div>
+    </div>
 
+    <div class="contentBx">
+        <div class="label">Can I customize my IWC watch?</div>
+        <div class="content">
+            <p>While IWC offers a range of straps and accessories to personalize your watch, 
+               the core designs and movements remain consistent with the brand’s heritage.</p>
+        </div>
+    </div>
+
+    <div class="contentBx">
+        <div class="label">What should I do if my IWC watch stops working?</div>
+        <div class="content">
+            <p>If your watch stops working, ensure it's properly wound or charged (for automatic models). 
+               If the issue persists, bring it to an authorized IWC service center for inspection.</p>
+        </div>
+    </div>
+</div>
 
         <footer>
             <div class="footer-content">
@@ -150,6 +183,16 @@
                  cookieModal.hide();
             });
             });
+            </script>
+
+
+            <script>
+                const accordition = document.getElementsByClassName('contentBx');
+                for (i=0; i<accordition.length; i++){
+                    accordition[i].addEventListener('click', function(){
+                        this.classList.toggle('active')
+                    })
+                }
             </script>
         <script src="main.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
