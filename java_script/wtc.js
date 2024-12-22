@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const newTitle = prompt("Edit Title:", post.title);
       const newContent = prompt("Edit Content:", post.content);
       if (newTitle && newContent) {
-        posts[i] = { ...post, title: newTitle, content: newContent };
+        posts[i] = {...post, title: newTitle, content: newContent };
         alert("Post updated successfully!");
         renderPosts(posts);
       }
