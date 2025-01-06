@@ -307,3 +307,144 @@ th, td {
     text-align: center;
     line-height: 50px;
 }
+
+.themeSwitcher{
+    display:flex;
+    gap:10px;
+    margin-top: 15px;
+    justify-content: center;
+}
+body.dark{
+    background-color: rgb(2, 18, 2);
+    color:white
+}
+
+
+.why {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .toggle-btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid ;
+    background-color: rgb(127, 176, 117);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #475d25;
+  }
+  
+  .contenttgl {
+    display: none;
+    padding: 10px;
+    border: 1px ;background-color: rgb(41, 80, 35);
+    border-top: none;
+    background-color: rgba(24, 53, 14, 0.618);
+    border-radius: 0 0 5px 5px;
+  }
+  
+  .contenttgl.visible {
+    display: block;
+  }
+
+
+.accordition {
+ 
+    max-width: 800px;
+  }
+
+  .accordition .contentBx
+  {
+    position: relative;
+    margin: 10px 20px;
+  }
+
+  .accordition .contentBx .label
+  {
+    position: relative;
+    padding: 10px;
+    background: #1a210e;
+    color: aliceblue;
+    cursor: pointer;
+  }
+
+  .accordition .contentBx .label::before{
+    content: '+';
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right:20px;
+    font-size: 1.5em;
+  }
+  .accordition .contentBx.active .label::before
+  {
+    content: '-';
+  }
+  .accordition .contentBx .content
+  {
+    position:relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+  }
+
+  .accordition .contentBx.active .content
+  {
+    height: 150px;
+    padding: 10px;
+  }
+
+
+  .watch-post{
+    border: 1px solid rgb(5, 54, 5);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: #fffedc;
+  }
+
+
+  .news-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 0px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  #newsResult {
+    margin-top: 20px;
+  }
+
+  .news-article {
+    margin: 20px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .news-article h2 {
+    font-size: 18px;
+  }
+
+  .news-article p {
+    font-size: 14px;
+    color: #555;
+  }
+
+  .news-article a{
+    color: rgb(49, 125, 3) !important;
+  }
+
+  #error {
+    color: red;
+  }
